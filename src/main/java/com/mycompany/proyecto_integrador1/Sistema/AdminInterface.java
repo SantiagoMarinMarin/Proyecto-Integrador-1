@@ -1,7 +1,7 @@
 
 package com.mycompany.proyecto_integrador1.Sistema;
 
-import com.mycompany.sistema_votaciones.Sistema.ConfigPanel;
+
 
 public class AdminInterface extends javax.swing.JFrame {
 
