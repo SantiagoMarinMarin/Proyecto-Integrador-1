@@ -109,6 +109,30 @@ public class ConexionBD {
     }
 }
 
+    
+    
+
+    public static void guardarCandidato(String nombre, String cargo, int tarjeton) {
+        Connection conexion = ConexionBD.conectar();
+        if (conexion != null) {
+            String sql = "INSERT INTO candidatos (nombre, cargo, tarjeton) VALUES (?, ?, ?)";
+            try {
+                PreparedStatement stmt = conexion.prepareStatement(sql);
+                stmt.setString(1, nombre);
+                stmt.setString(2, cargo);
+                stmt.setInt(3, tarjeton);
+                stmt.executeUpdate();
+                System.out.println("✅ Candidato registrado con éxito");
+            } catch (SQLException e) {
+                System.out.println("❌ Error al registrar candidato: " + e.getMessage());
+            }
+        }
+    }
+
+
+    
+
+    
 }
 
     

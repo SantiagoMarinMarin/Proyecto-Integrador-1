@@ -53,6 +53,11 @@ public class CandidateForm extends javax.swing.JFrame {
         });
 
         btnRegistrar.setText("Registrar");
+        btnRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRegistrarMouseClicked(evt);
+            }
+        });
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarActionPerformed(evt);
@@ -155,9 +160,7 @@ public class CandidateForm extends javax.swing.JFrame {
 
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-                registrarCandidato();
-            
-        
+                                  
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void cbCargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCargoActionPerformed
@@ -167,6 +170,14 @@ public class CandidateForm extends javax.swing.JFrame {
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNombreActionPerformed
+
+    private void btnRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMouseClicked
+        String nombre = txtNombre.getText();
+    String cargo = cbCargo.getSelectedItem().toString();  
+    int tarjeton = Integer.parseInt(txtTarjeton.getText());
+
+    ConexionBD.guardarCandidato(nombre, cargo, tarjeton);
+    }//GEN-LAST:event_btnRegistrarMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
