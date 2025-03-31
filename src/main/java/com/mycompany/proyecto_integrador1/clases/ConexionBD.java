@@ -108,6 +108,7 @@ public class ConexionBD {
         JOptionPane.showMessageDialog(null, "Error al registrar acceso: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
     }
 }
+
 }
 
     

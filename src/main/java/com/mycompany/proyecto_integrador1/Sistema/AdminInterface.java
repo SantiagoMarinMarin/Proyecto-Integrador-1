@@ -1,6 +1,7 @@
 
 package com.mycompany.proyecto_integrador1.Sistema;
-
+import javax.swing.JFrame;  // Importación necesaria para JFrame
+import javax.swing.JOptionPane;
 
 
 public class AdminInterface extends javax.swing.JFrame {
@@ -70,9 +71,12 @@ public class AdminInterface extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAbrirConfiguracionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAbrirConfiguracionActionPerformed
-        ConfigPanel config = new ConfigPanel();
-        config.setVisible(true);
-
+        JFrame frame = new JFrame("Configuración");
+        frame.setContentPane(new ConfigPanel());
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        frame.pack();
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
     }//GEN-LAST:event_btnAbrirConfiguracionActionPerformed
 
   
