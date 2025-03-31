@@ -78,11 +78,18 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Iniciar Votaciones"/>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnIniciarVotacionesMouseClicked"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnIniciarVotacionesActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnCerrarVotaciones">
       <Properties>
         <Property name="text" type="java.lang.String" value="Cerrar Votaciones"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCerrarVotacionesActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
