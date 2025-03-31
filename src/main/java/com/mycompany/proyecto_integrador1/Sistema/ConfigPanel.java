@@ -2,13 +2,17 @@
 package com.mycompany.proyecto_integrador1.Sistema;
 
 import com.mycompany.proyecto_integrador1.Sistema.CandidateForm;
-
+import javax.swing.JButton;   // Importación para JButton
+import javax.swing.JFrame;    // Importación para JFrame
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;  
 
 public class ConfigPanel extends javax.swing.JPanel {
-
+private JButton btnGestionCandidatos, btnAdminVotaciones;
   
     public ConfigPanel() {
         initComponents();
+        
     }
 
     /**
@@ -62,15 +66,14 @@ public class ConfigPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrearCandidatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearCandidatosActionPerformed
-        // Por ejemplo, abrir el formulario para crear candidatos
+
         CandidateForm candidateForm = new CandidateForm();
         candidateForm.setVisible(true);
 
     }//GEN-LAST:event_btnCrearCandidatosActionPerformed
 
     private void btnRegistrarVotantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarVotantesActionPerformed
-        // Aquí puedes implementar la lógica para registrar votantes,
-        // por ejemplo, leyendo un archivo Excel o mostrando otro formulario.
+
         javax.swing.JOptionPane.showMessageDialog(this, "Funcionalidad para registrar votantes");
 
     }//GEN-LAST:event_btnRegistrarVotantesActionPerformed
