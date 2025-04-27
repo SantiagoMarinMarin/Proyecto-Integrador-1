@@ -36,7 +36,6 @@ public class InterfUsua extends javax.swing.JFrame {
 
         jButton1.setText("ingresar");
 
-        jPasswordField1.setText("jPasswordField1");
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jPasswordField1ActionPerformed(evt);
@@ -52,18 +51,17 @@ public class InterfUsua extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(113, 113, 113)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(layout.createSequentialGroup()
-                            .addGap(177, 177, 177)
+                            .addGap(64, 64, 64)
                             .addComponent(jButton1))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createSequentialGroup()
                             .addComponent(jLabel1)
-                            .addGap(18, 18, 18)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(jPasswordField1)))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(113, 113, 113)
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
