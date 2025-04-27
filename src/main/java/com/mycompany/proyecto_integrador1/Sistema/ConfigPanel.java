@@ -103,6 +103,11 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
     private void btnRegistrarVotantesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarVotantesActionPerformed
 
         javax.swing.JOptionPane.showMessageDialog(this, "Funcionalidad para registrar votantes");
+        
+        RegistrarVotantes registrovotantes = new RegistrarVotantes();
+        registrovotantes.setVisible(true);
+        
+        
     }//GEN-LAST:event_btnRegistrarVotantesActionPerformed
 
     private void btnCrearCandidatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearCandidatosActionPerformed
