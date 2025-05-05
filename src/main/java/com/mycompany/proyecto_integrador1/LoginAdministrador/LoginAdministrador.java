@@ -6,6 +6,7 @@ import com.mycompany.proyecto_integrador1.Sistema.AdminInterface;
 import static com.mycompany.proyecto_integrador1.clases.ConexionBD.registrarAcceso;
 import static com.mycompany.proyecto_integrador1.clases.ConexionBD.validarLogin;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
 
 public class LoginAdministrador extends javax.swing.JFrame {
 
@@ -17,108 +18,186 @@ public class LoginAdministrador extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Botonlogin = new javax.swing.JButton();
-        Nombreusuario = new javax.swing.JTextField();
-        Identificacionusuario = new javax.swing.JTextField();
-        Contraseñausuario = new javax.swing.JPasswordField();
-        jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        Identificacionusuario = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        Contraseñausuario = new javax.swing.JPasswordField();
+        jLabel10 = new javax.swing.JLabel();
+        Nombreusuario = new javax.swing.JTextField();
+        Botonlogin = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        Botonlogin.setText("Login ");
+        jPanel1.setPreferredSize(new java.awt.Dimension(720, 400));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel3.setBackground(new java.awt.Color(230, 243, 255));
+        jPanel3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(204, 204, 204), 1, true));
+        jPanel3.setMinimumSize(new java.awt.Dimension(458, 495));
+        jPanel3.setPreferredSize(new java.awt.Dimension(1440, 1024));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("Ingrese a su cuenta");
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1090, 40));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/Input (1).png"))); // NOI18N
+        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 550, 620, -1));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(124, 131, 138));
+        jLabel2.setText("Contraseña");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 202, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 202, -1));
+
+        jLabel6.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel6.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(124, 131, 138));
+        jLabel6.setText("Nombre de usuario");
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 202, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/Input (1).png"))); // NOI18N
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, -1, -1));
+
+        Identificacionusuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        Identificacionusuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel2.add(Identificacionusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 570, 65));
+
+        jLabel7.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel7.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(124, 131, 138));
+        jLabel7.setText("Identificación");
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 202, -1));
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, 350));
+
+        Contraseñausuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        Contraseñausuario.setBorder(null);
+        Contraseñausuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContraseñausuarioActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Contraseñausuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 550, 540, 65));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/Input (1).png"))); // NOI18N
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 400, -1, -1));
+
+        Nombreusuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
+        Nombreusuario.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Roboto", 0, 20), new java.awt.Color(255, 255, 255))); // NOI18N
+        Nombreusuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NombreusuarioActionPerformed(evt);
+            }
+        });
+        jPanel2.add(Nombreusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 400, 540, 65));
+
+        Botonlogin.setBackground(new java.awt.Color(65, 90, 119));
+        Botonlogin.setFont(new java.awt.Font("Roboto", 0, 26)); // NOI18N
+        Botonlogin.setForeground(new java.awt.Color(255, 255, 255));
+        Botonlogin.setText("Ingrese a su cuenta ");
+        Botonlogin.setBorder(null);
         Botonlogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 BotonloginActionPerformed(evt);
             }
         });
+        jPanel2.add(Botonlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 650, 320, 40));
 
-        jLabel1.setText("Contraseña:");
-
-        jLabel2.setText("Nombre de usuario:");
-
-        jLabel3.setText("Identificación:");
-
-        jLabel4.setText("Bienvenido al SVE.");
-
-        jLabel5.setText("Registrarse.");
+        jLabel5.setBackground(new java.awt.Color(0, 255, 204));
+        jLabel5.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(65, 90, 119));
+        jLabel5.setText(" Registrarse");
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
             }
         });
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 730, 300, -1));
+
+        jLabel11.setBackground(new java.awt.Color(0, 255, 204));
+        jLabel11.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
+        jLabel11.setText("Si no tiene una cuenta,");
+        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel11MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 730, 300, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/ButtonCreateAcc (1).png"))); // NOI18N
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 640, -1, 60));
+
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 1090, 850));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/Black And White Modern Car Wash Logo (1) 1.png"))); // NOI18N
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1840, 850));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(Nombreusuario)
-                            .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
-                            .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
-                            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(Identificacionusuario, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(Contraseñausuario, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(137, 137, 137))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 188, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(125, 125, 125))))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(202, 202, 202)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Botonlogin))
-                .addGap(0, 86, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1839, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(15, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Nombreusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
-                .addGap(19, 19, 19)
-                .addComponent(Identificacionusuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(8, 8, 8)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(Contraseñausuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel5)
-                .addGap(31, 31, 31)
-                .addComponent(Botonlogin)
-                .addGap(42, 42, 42))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 844, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void BotonloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonloginActionPerformed
-    String usuario = Nombreusuario.getText();
-    String identificacion = Identificacionusuario.getText();
-    String contraseña = new String(Contraseñausuario.getPassword());
+        String usuario = Nombreusuario.getText();
+        String identificacion = Identificacionusuario.getText();
+        String contraseña = new String(Contraseñausuario.getPassword());
 
-    if (validarLogin(usuario, identificacion, contraseña)) {
-        JOptionPane.showMessageDialog(this, "¡Login exitoso!", "Bienvenido", JOptionPane.INFORMATION_MESSAGE);
-        
-        registrarAcceso(usuario, identificacion);
-        AdminInterface admin = new AdminInterface();
-        admin.setVisible(true);
-        this.dispose();
-    } else {
-        JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
-    }
+        if (validarLogin(usuario, identificacion, contraseña)) {
+            JOptionPane.showMessageDialog(this, "¡Login exitoso!", "Bienvenido", JOptionPane.INFORMATION_MESSAGE);
+
+            registrarAcceso(usuario, identificacion);
+            AdminInterface admin = new AdminInterface();
+            admin.setVisible(true);
+            this.dispose();
+        } else {
+            JOptionPane.showMessageDialog(this, "Usuario o contraseña incorrectos.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
     }//GEN-LAST:event_BotonloginActionPerformed
 
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
@@ -127,6 +206,18 @@ public class LoginAdministrador extends javax.swing.JFrame {
         dispose(); // Cierra la ventana de Login
     }//GEN-LAST:event_jLabel5MouseClicked
 
+    private void NombreusuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NombreusuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_NombreusuarioActionPerformed
+
+    private void ContraseñausuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContraseñausuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ContraseñausuarioActionPerformed
+
+    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel11MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Botonlogin;
@@ -134,9 +225,20 @@ public class LoginAdministrador extends javax.swing.JFrame {
     private javax.swing.JTextField Identificacionusuario;
     private javax.swing.JTextField Nombreusuario;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
     // End of variables declaration//GEN-END:variables
 }
