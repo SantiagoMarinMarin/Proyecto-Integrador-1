@@ -20,30 +20,36 @@ public class CandidateForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         LabelRegistrarcandidato = new javax.swing.JLabel();
         LabelNombre = new javax.swing.JLabel();
-        LabelCargo = new javax.swing.JLabel();
-        LabelTarjetón = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
+        LabelCargo = new javax.swing.JLabel();
         cbCargo = new javax.swing.JComboBox<>();
+        LabelTarjetón = new javax.swing.JLabel();
         txtTarjeton = new javax.swing.JTextField();
         btnRegistrar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         LabelRegistrarcandidato.setText("Registrar Candidato");
+        jPanel1.add(LabelRegistrarcandidato, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 16, -1, -1));
 
         LabelNombre.setText("Nombre");
-
-        LabelCargo.setText("Cargo:");
-
-        LabelTarjetón.setText("Tarjetón:");
+        jPanel1.add(LabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
 
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreActionPerformed(evt);
             }
         });
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 71, -1));
+
+        LabelCargo.setText("Cargo:");
+        jPanel1.add(LabelCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         cbCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Personero", "Mediador", "Contralor", "Representante" }));
         cbCargo.addActionListener(new java.awt.event.ActionListener() {
@@ -51,6 +57,11 @@ public class CandidateForm extends javax.swing.JFrame {
                 cbCargoActionPerformed(evt);
             }
         });
+        jPanel1.add(cbCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
+
+        LabelTarjetón.setText("Tarjetón:");
+        jPanel1.add(LabelTarjetón, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
+        jPanel1.add(txtTarjeton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 71, -1));
 
         btnRegistrar.setText("Registrar");
         btnRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -63,55 +74,17 @@ public class CandidateForm extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
+        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(129, 129, 129)
-                        .addComponent(LabelRegistrarcandidato))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnRegistrar)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(LabelTarjetón)
-                                    .addGap(34, 34, 34)
-                                    .addComponent(txtTarjeton, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                    .addComponent(LabelNombre)
-                                    .addGap(33, 33, 33)
-                                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(LabelCargo)
-                                .addGap(44, 44, 44)
-                                .addComponent(cbCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(149, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1845, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(LabelRegistrarcandidato)
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelNombre)
-                    .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(LabelCargo)
-                    .addComponent(cbCargo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtTarjeton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(LabelTarjetón))
-                .addGap(37, 37, 37)
-                .addComponent(btnRegistrar)
-                .addContainerGap(109, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
         );
 
         pack();
@@ -187,6 +160,7 @@ public class CandidateForm extends javax.swing.JFrame {
     private javax.swing.JLabel LabelTarjetón;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JComboBox<String> cbCargo;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtTarjeton;
     // End of variables declaration//GEN-END:variables

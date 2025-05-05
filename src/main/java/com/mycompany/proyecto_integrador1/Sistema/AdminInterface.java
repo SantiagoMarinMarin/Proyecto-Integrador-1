@@ -19,23 +19,94 @@ public class AdminInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnAbrirConfiguracion = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel9 = new javax.swing.JLabel();
         btnVotaciones = new javax.swing.JButton();
-        btnIniciarVotaciones = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
         btnCerrarVotaciones = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        btnAbrirConfiguracion = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        btnIniciarVotaciones = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1850, 845));
 
-        btnAbrirConfiguracion.setText("Abrir Configuración");
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/iconsax-ranking.png"))); // NOI18N
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 650, -1, 60));
+
+        btnVotaciones.setBackground(new java.awt.Color(65, 90, 119));
+        btnVotaciones.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        btnVotaciones.setText("Resultados");
+        btnVotaciones.setBorder(null);
+        btnVotaciones.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        btnVotaciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVotacionesActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnVotaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 640, 350, 90));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/iconsax-logout-2.png"))); // NOI18N
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 660, 110, 60));
+
+        btnCerrarVotaciones.setBackground(new java.awt.Color(65, 90, 119));
+        btnCerrarVotaciones.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        btnCerrarVotaciones.setText("Cerrar Votaciones");
+        btnCerrarVotaciones.setBorder(null);
+        btnCerrarVotaciones.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        btnCerrarVotaciones.setHorizontalTextPosition(javax.swing.SwingConstants.LEADING);
+        btnCerrarVotaciones.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCerrarVotacionesActionPerformed(evt);
+            }
+        });
+        jPanel3.add(btnCerrarVotaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 640, 370, 90));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/iconsax-settings.png"))); // NOI18N
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 440, -1, -1));
+
+        btnAbrirConfiguracion.setBackground(new java.awt.Color(65, 90, 119));
+        btnAbrirConfiguracion.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
+        btnAbrirConfiguracion.setText("Configuración");
+        btnAbrirConfiguracion.setBorder(null);
+        btnAbrirConfiguracion.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         btnAbrirConfiguracion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAbrirConfiguracionActionPerformed(evt);
             }
         });
+        jPanel3.add(btnAbrirConfiguracion, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 430, 300, 90));
 
-        btnVotaciones.setText("Votaciones");
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/Black And White Modern Car Wash Logo (4) 1.png"))); // NOI18N
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, -20, -1, -1));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/ContentFrame (2)_1.png"))); // NOI18N
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/iconsax-arrow-right-4.png"))); // NOI18N
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, -1, -1));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/ButtonCreateAcc (3).png"))); // NOI18N
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 630, -1, -1));
+
+        btnIniciarVotaciones.setBackground(new java.awt.Color(58, 134, 255));
+        btnIniciarVotaciones.setFont(new java.awt.Font("Roboto", 1, 36)); // NOI18N
         btnIniciarVotaciones.setText("Iniciar Votaciones");
+        btnIniciarVotaciones.setBorder(null);
+        btnIniciarVotaciones.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         btnIniciarVotaciones.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 btnIniciarVotacionesMouseClicked(evt);
@@ -46,44 +117,33 @@ public class AdminInterface extends javax.swing.JFrame {
                 btnIniciarVotacionesActionPerformed(evt);
             }
         });
+        jPanel3.add(btnIniciarVotaciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 370, 90));
 
-        btnCerrarVotaciones.setText("Cerrar Votaciones");
-        btnCerrarVotaciones.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCerrarVotacionesActionPerformed(evt);
-            }
-        });
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/ButtonFrame.png"))); // NOI18N
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/ButtonCreateAcc (3).png"))); // NOI18N
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 630, -1, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/ButtonCreateAcc (3).png"))); // NOI18N
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 420, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(33, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnCerrarVotaciones)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(btnIniciarVotaciones)
-                            .addGap(46, 46, 46))
-                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                            .addComponent(btnVotaciones)
-                            .addGap(126, 126, 126)
-                            .addComponent(btnAbrirConfiguracion)
-                            .addGap(20, 20, 20)))))
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1850, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(btnIniciarVotaciones)
-                .addGap(34, 34, 34)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnVotaciones)
-                    .addComponent(btnAbrirConfiguracion))
-                .addGap(46, 46, 46)
-                .addComponent(btnCerrarVotaciones)
-                .addContainerGap(121, Short.MAX_VALUE))
+                .addGap(231, 231, 231)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -117,6 +177,10 @@ public class AdminInterface extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnCerrarVotacionesActionPerformed
 
+    private void btnVotacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVotacionesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnVotacionesActionPerformed
+
    
 
 
@@ -125,5 +189,17 @@ public class AdminInterface extends javax.swing.JFrame {
     private javax.swing.JButton btnCerrarVotaciones;
     private javax.swing.JButton btnIniciarVotaciones;
     private javax.swing.JButton btnVotaciones;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
