@@ -126,14 +126,52 @@ public class ConexionBD {
             } catch (SQLException e) {
                 System.out.println("❌ Error al registrar candidato: " + e.getMessage());
             }
+        }  
+    }
+    
+    
+    public static boolean GuardarVotante(String PrimerNombre, String SegundoNombre, String PrimerApellido, String SegundoApellido, int Identificacion, String Curso, String CodigoVotacion){
+    // Conexión a la base de datos
+    Connection conexion = ConexionBD.conectar();
+    
+    // Variable que indica si la operación fue exitosa
+    boolean exito = false;
+    
+    if (conexion != null) {
+        // Consulta SQL de inserción para la tabla "estudiantes"
+        String sql = "INSERT INTO estudiantes (nombre1, nombre2, apellido1, apellido2, identificacion, curso, codigo_votacion) VALUES (?, ?, ?, ?, ?, ?, ?)";
+        
+        try {
+            // Preparar la sentencia SQL
+            PreparedStatement stmt = conexion.prepareStatement(sql);
+            
+            // Asignar los valores a los parámetros de la consulta SQL
+            stmt.setString(1, PrimerNombre);  // Primer Nombre
+            stmt.setString(2, SegundoNombre); // Segundo Nombre
+            stmt.setString(3, PrimerApellido); // Primer Apellido
+            stmt.setString(4, SegundoApellido); // Segundo Apellido
+            stmt.setInt(5, Identificacion); // Identificación
+            stmt.setString(6, Curso); // Curso
+            stmt.setString(7, CodigoVotacion); // Código de Votación
+            
+            // Ejecutar la actualización en la base de datos
+            stmt.executeUpdate();
+            
+            // Si todo salió bien, marcamos exito como verdadero
+            exito = true;
+            System.out.println("✅ Votante registrado con éxito");
+        } catch (SQLException e) {
+            // Manejo de errores en caso de problemas
+            System.out.println("❌ Error al registrar votante: " + e.getMessage());
         }
     }
-
-
     
-
-    
+    // Retornar el valor de exito (true si la inserción fue exitosa, false si ocurrió algún error)
+    return exito;
 }
+
+}
+
 
     
 
