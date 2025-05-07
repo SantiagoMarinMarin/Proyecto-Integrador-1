@@ -61,7 +61,7 @@ public class ConexionBD {
 
         ResultSet rs = ps.executeQuery();
 
-        if (rs.next()) { // Si encuentra un resultado, el login es correcto
+        if (rs.next()) { 
             accesoPermitido = true;
         }
         conexion.close();
