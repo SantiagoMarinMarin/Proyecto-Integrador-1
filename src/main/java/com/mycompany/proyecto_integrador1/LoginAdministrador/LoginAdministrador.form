@@ -87,7 +87,7 @@
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
                   <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
                     <LineBorder roundedCorners="true">
-                      <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
+                      <Color PropertyName="color" blue="e7" green="e3" red="cf" type="rgb"/>
                     </LineBorder>
                   </Border>
                 </Property>
@@ -163,6 +163,9 @@
                 </Component>
                 <Component class="javax.swing.JTextField" name="Identificacionusuario">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e7" green="e3" red="de" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Roboto" size="20" style="0"/>
                     </Property>
@@ -179,7 +182,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="160" y="410" width="570" height="65"/>
+                      <AbsoluteConstraints x="170" y="410" width="540" height="65"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -224,6 +227,9 @@
                 </Container>
                 <Component class="javax.swing.JPasswordField" name="Contrase&#xf1;ausuario">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e7" green="e3" red="de" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Roboto" size="20" style="0"/>
                     </Property>
@@ -236,27 +242,20 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="180" y="550" width="540" height="65"/>
+                      <AbsoluteConstraints x="170" y="550" width="540" height="65"/>
                     </Constraint>
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JTextField" name="Nombreusuario">
                   <Properties>
+                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="e7" green="e3" red="de" type="rgb"/>
+                    </Property>
                     <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                       <Font name="Roboto" size="20" style="0"/>
                     </Property>
                     <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
-                      <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                        <TitledBorder>
-                          <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
-                            <LineBorder>
-                              <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                            </LineBorder>
-                          </Border>
-                          <Font PropertyName="font" name="Roboto" size="20" style="0"/>
-                          <Color PropertyName="color" blue="ff" green="ff" red="ff" type="rgb"/>
-                        </TitledBorder>
-                      </Border>
+                      <Border info="null"/>
                     </Property>
                   </Properties>
                   <Events>
@@ -264,7 +263,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="160" y="260" width="540" height="65"/>
+                      <AbsoluteConstraints x="170" y="250" width="540" height="65"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -289,7 +288,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="360" y="650" width="320" height="40"/>
+                      <AbsoluteConstraints x="260" y="680" width="320" height="40"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -311,7 +310,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="370" y="730" width="300" height="-1"/>
+                      <AbsoluteConstraints x="360" y="780" width="300" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
@@ -330,7 +329,7 @@
                   </Events>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                      <AbsoluteConstraints x="180" y="730" width="300" height="-1"/>
+                      <AbsoluteConstraints x="180" y="780" width="300" height="-1"/>
                     </Constraint>
                   </Constraints>
                 </Component>
