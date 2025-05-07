@@ -46,7 +46,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(207, 227, 231), 1, true));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
@@ -67,6 +67,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
         jLabel6.setText("Nombre de usuario");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 210, 202, -1));
 
+        Identificacionusuario.setBackground(new java.awt.Color(222, 227, 231));
         Identificacionusuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         Identificacionusuario.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         Identificacionusuario.addActionListener(new java.awt.event.ActionListener() {
@@ -74,7 +75,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
                 IdentificacionusuarioActionPerformed(evt);
             }
         });
-        jPanel2.add(Identificacionusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, 570, 65));
+        jPanel2.add(Identificacionusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 410, 540, 65));
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
@@ -95,6 +96,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
 
         jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, 350));
 
+        Contraseñausuario.setBackground(new java.awt.Color(222, 227, 231));
         Contraseñausuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         Contraseñausuario.setBorder(null);
         Contraseñausuario.addActionListener(new java.awt.event.ActionListener() {
@@ -102,16 +104,17 @@ public class LoginAdministrador extends javax.swing.JFrame {
                 ContraseñausuarioActionPerformed(evt);
             }
         });
-        jPanel2.add(Contraseñausuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 550, 540, 65));
+        jPanel2.add(Contraseñausuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 550, 540, 65));
 
+        Nombreusuario.setBackground(new java.awt.Color(222, 227, 231));
         Nombreusuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
-        Nombreusuario.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)), "", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Roboto", 0, 20), new java.awt.Color(255, 255, 255))); // NOI18N
+        Nombreusuario.setBorder(null);
         Nombreusuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 NombreusuarioActionPerformed(evt);
             }
         });
-        jPanel2.add(Nombreusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 540, 65));
+        jPanel2.add(Nombreusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 540, 65));
 
         Botonlogin.setBackground(new java.awt.Color(65, 90, 119));
         Botonlogin.setFont(new java.awt.Font("Roboto", 0, 26)); // NOI18N
@@ -123,7 +126,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
                 BotonloginActionPerformed(evt);
             }
         });
-        jPanel2.add(Botonlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 650, 320, 40));
+        jPanel2.add(Botonlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 680, 320, 40));
 
         Registrarse.setBackground(new java.awt.Color(0, 255, 204));
         Registrarse.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -134,7 +137,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
                 RegistrarseMouseClicked(evt);
             }
         });
-        jPanel2.add(Registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 730, 300, -1));
+        jPanel2.add(Registrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 780, 300, -1));
 
         jLabel11.setBackground(new java.awt.Color(0, 255, 204));
         jLabel11.setFont(new java.awt.Font("Roboto", 0, 18)); // NOI18N
@@ -144,7 +147,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
                 jLabel11MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 730, 300, -1));
+        jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 780, 300, -1));
 
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 1090, 850));
 

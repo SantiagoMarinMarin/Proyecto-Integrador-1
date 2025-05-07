@@ -1,6 +1,7 @@
 
 package com.mycompany.proyecto_integrador1.Sistema;
 
+import com.mycompany.proyecto_integrador1.LoginAdministrador.LoginAdministrador;
 import com.mycompany.proyecto_integrador1.Sistema.CandidateForm;
 import javax.swing.JButton;   // Importación para JButton
 import javax.swing.JFrame;    // Importación para JFrame
@@ -28,6 +29,8 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
         btnCrearCandidatos = new javax.swing.JButton();
         btnRegistrarVotantes = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(1562, 850));
@@ -39,25 +42,23 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
         btnCrearCandidatos.setText("Registrar Candidatos");
         btnCrearCandidatos.setToolTipText("");
         btnCrearCandidatos.setBorder(null);
-        btnCrearCandidatos.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         btnCrearCandidatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearCandidatosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCrearCandidatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 540, 350, 80));
+        jPanel1.add(btnCrearCandidatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 520, 350, 80));
 
         btnRegistrarVotantes.setBackground(new java.awt.Color(65, 90, 119));
         btnRegistrarVotantes.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
         btnRegistrarVotantes.setText("Registrar Votantes");
         btnRegistrarVotantes.setBorder(null);
-        btnRegistrarVotantes.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         btnRegistrarVotantes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarVotantesActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegistrarVotantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 530, 340, 80));
+        jPanel1.add(btnRegistrarVotantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(1060, 520, 340, 80));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -71,6 +72,21 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 400, 660, -1));
+
+        jPanel3.setBackground(new java.awt.Color(230, 243, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel6.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel6.setText("<--");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, 30));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1860, 350));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -105,11 +121,19 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
         candidateForm.setVisible(true);
     }//GEN-LAST:event_btnCrearCandidatosActionPerformed
 
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        LoginAdministrador login = new LoginAdministrador();
+        login.setVisible(true);
+        
+    }//GEN-LAST:event_jLabel6MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrearCandidatos;
     private javax.swing.JButton btnRegistrarVotantes;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }

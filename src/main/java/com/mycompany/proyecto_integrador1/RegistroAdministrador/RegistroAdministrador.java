@@ -26,6 +26,8 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         Nombreusuario = new javax.swing.JTextField();
         Contraseñausuario = new javax.swing.JPasswordField();
         Botonlogin = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -37,8 +39,13 @@ public class RegistroAdministrador extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("Registre su cuenta");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1090, 40));
+        jLabel6.setText("<--");
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 30));
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
@@ -58,14 +65,17 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         jLabel2.setText("Contraseña");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 520, 202, -1));
 
+        Identificacionusuario.setBackground(new java.awt.Color(222, 227, 231));
         Identificacionusuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         Identificacionusuario.setBorder(null);
         jPanel2.add(Identificacionusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 570, 65));
 
+        Nombreusuario.setBackground(new java.awt.Color(222, 227, 231));
         Nombreusuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         Nombreusuario.setBorder(null);
         jPanel2.add(Nombreusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 570, 65));
 
+        Contraseñausuario.setBackground(new java.awt.Color(222, 227, 231));
         Contraseñausuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         Contraseñausuario.setBorder(null);
         jPanel2.add(Contraseñausuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 570, 570, 65));
@@ -81,6 +91,31 @@ public class RegistroAdministrador extends javax.swing.JFrame {
             }
         });
         jPanel2.add(Botonlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 710, 320, 50));
+
+        jLabel9.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("Registre su cuenta");
+        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1090, 40));
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 120, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 40, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 40));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 850));
 
@@ -114,6 +149,18 @@ public class RegistroAdministrador extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_BotonloginActionPerformed
 
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+        LoginAdministrador login = new LoginAdministrador();
+        login.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        LoginAdministrador login = new LoginAdministrador();
+        login.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jPanel3MouseClicked
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -125,7 +172,9 @@ public class RegistroAdministrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
