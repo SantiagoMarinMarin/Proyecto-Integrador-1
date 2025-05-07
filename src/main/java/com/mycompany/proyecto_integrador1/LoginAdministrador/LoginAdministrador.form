@@ -103,11 +103,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JLabel" name="jLabel9">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Proyecto Integrador I\Projecto-Integrador-I\Projecto-Integrador-I\Projecto-Integrador-I\Proyecto-Integrador-1\src\main\java\com\mycompany\proyecto_integrador1\LoginAdministrador\Imagenes\Boton_gris_claro.png"/>
-                    </Property>
-                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="170" y="550" width="620" height="-1"/>
@@ -115,11 +110,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel8">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Proyecto Integrador I\Projecto-Integrador-I\Projecto-Integrador-I\Projecto-Integrador-I\Proyecto-Integrador-1\src\main\java\com\mycompany\proyecto_integrador1\LoginAdministrador\Imagenes\Boton_gris_claro.png"/>
-                    </Property>
-                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="180" y="250" width="610" height="-1"/>
@@ -127,11 +117,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel1">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Proyecto Integrador I\Projecto-Integrador-I\Projecto-Integrador-I\Projecto-Integrador-I\Proyecto-Integrador-1\src\main\java\com\mycompany\proyecto_integrador1\LoginAdministrador\Imagenes\Boton_gris_claro.png"/>
-                    </Property>
-                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="170" y="410" width="610" height="-1"/>
@@ -323,11 +308,6 @@
                   </Constraints>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel10">
-                  <Properties>
-                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                      <Image iconType="2" name="C:\Proyecto Integrador I\Projecto-Integrador-I\Projecto-Integrador-I\Projecto-Integrador-I\Proyecto-Integrador-1\src\main\java\com\mycompany\proyecto_integrador1\LoginAdministrador\Imagenes\Boton_azul_peque&#xf1;o.png"/>
-                    </Property>
-                  </Properties>
                   <Constraints>
                     <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
                       <AbsoluteConstraints x="240" y="670" width="-1" height="-1"/>
@@ -378,14 +358,21 @@
               </SubComponents>
             </Container>
             <Component class="javax.swing.JLabel" name="jLabel5">
+              <Constraints>
+                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+                  <AbsoluteConstraints x="100" y="130" width="-1" height="-1"/>
+                </Constraint>
+              </Constraints>
+            </Component>
+            <Component class="javax.swing.JLabel" name="jLabel12">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Proyecto Integrador I\Projecto-Integrador-I\Projecto-Integrador-I\Projecto-Integrador-I\Proyecto-Integrador-1\src\main\java\com\mycompany\proyecto_integrador1\LoginAdministrador\Imagenes\Logo_principal_Login.png"/>
+                  <Image iconType="2" name="C:\Users\Nicol Alejandra\Documents\NetBeansProjects\Proyecto-Integrador-1\src\main\java\Imagenes\Logo_principal_Login.png"/>
                 </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="100" y="130" width="-1" height="-1"/>
+                  <AbsoluteConstraints x="100" y="200" width="-1" height="-1"/>
                 </Constraint>
               </Constraints>
             </Component>
