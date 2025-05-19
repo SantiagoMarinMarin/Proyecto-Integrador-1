@@ -1,9 +1,6 @@
 package com.mycompany.proyecto_integrador1.Sistema;
 
 import com.mycompany.proyecto_integrador1.clases.ConexionBD;
-import javax.swing.*;
-import java.awt.event.*;
-import java.sql.*;
 
 
 public class CandidateForm extends javax.swing.JFrame {
@@ -80,76 +77,34 @@ public class CandidateForm extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1845, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void registrarCandidato() {
-        Connection conexion = ConexionBD.conectar();
-        if (conexion == null) {
-            JOptionPane.showMessageDialog(this, "❌ Error: No se pudo conectar a la base de datos.");
-            return;
-        }
-        
-        int tarjeton;
-        try {
-            tarjeton = Integer.parseInt(txtTarjeton.getText());
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "❌ Error: El Tarjetón debe ser un número.");
-            return;
-        }
-        
-        String sql = "INSERT INTO candidatos (nombre, id_cargo, id_tarjeton) VALUES (?, ?, ?)";
-        try {
-            PreparedStatement ps = conexion.prepareStatement(sql);
-            ps.setString(1, txtNombre.getText());
-            ps.setInt(2, cbCargo.getSelectedIndex() + 1);
-            ps.setInt(3, tarjeton);
-            int filas = ps.executeUpdate();
-            if (filas > 0) {
-                JOptionPane.showMessageDialog(this, "✅ Candidato registrado con éxito.");
-                txtNombre.setText("");
-                txtTarjeton.setText("");
-                cbCargo.setSelectedIndex(0);
-            } else {
-                JOptionPane.showMessageDialog(this, "⚠️ Error al registrar el candidato.");
-            }
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(this, "❌ Error en la BD: " + e.getMessage());
-        } finally {
-            try {
-                conexion.close();
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
-    }
-
 
     private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
                                   
     }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void cbCargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCargoActionPerformed
-        // TODO add your handling code here:
+ 
     }//GEN-LAST:event_cbCargoActionPerformed
 
     private void txtNombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombreActionPerformed
-        // TODO add your handling code here:
+    
     }//GEN-LAST:event_txtNombreActionPerformed
 
     private void btnRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMouseClicked
-        String nombre = txtNombre.getText();
+    String nombre = txtNombre.getText();
     String cargo = cbCargo.getSelectedItem().toString();  
     int tarjeton = Integer.parseInt(txtTarjeton.getText());
 
-    ConexionBD.guardarCandidato(nombre, cargo, tarjeton);
+    ConexionBD.guardarEnTablaPorCargo(nombre, cargo, tarjeton);
     }//GEN-LAST:event_btnRegistrarMouseClicked
 
 
