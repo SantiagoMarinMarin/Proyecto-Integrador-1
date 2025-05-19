@@ -5,14 +5,21 @@ import com.mycompany.proyecto_integrador1.RegistroAdministrador.RegistroAdminist
 import com.mycompany.proyecto_integrador1.Sistema.AdminInterface;
 import static com.mycompany.proyecto_integrador1.clases.ConexionBD.registrarAcceso;
 import static com.mycompany.proyecto_integrador1.clases.ConexionBD.validarLogin;
+import java.net.URL;
 import javax.swing.ImageIcon;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 
 public class LoginAdministrador extends javax.swing.JFrame {
 
     public LoginAdministrador() {
-        initComponents();
+    initComponents();
+    jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Logo_principal.png")));
+    URL img = getClass().getResource("/imagenes/Logo_principal.png");
+    System.out.println("Ruta imagen: " + img);
+
+
     }
 
   
@@ -38,11 +45,10 @@ public class LoginAdministrador extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         Registrarse = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        canvas1 = new java.awt.Canvas();
-        jLabel13 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -161,18 +167,17 @@ public class LoginAdministrador extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 780, 300, -1));
 
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_gris_claro.png"))); // NOI18N
+        jLabel13.setText("jLabel13");
+        jPanel2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 410, -1, -1));
+
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 1090, 850));
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
         jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, -1, -1));
-        jPanel3.add(canvas1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 300, -1, -1));
 
-        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nicol Alejandra\\Documents\\NetBeansProjects\\Proyecto-Integrador-1\\Imagenes\\Logo_Segundario.png")); // NOI18N
-        jLabel13.setText("jLabel13");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
-
-        jButton1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nicol Alejandra\\Documents\\NetBeansProjects\\Proyecto-Integrador-1\\Imagenes\\Logo_Segundario.png")); // NOI18N
-        jButton1.setText("jButton1");
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Logo_principal.png"))); // NOI18N
+        jLabel14.setText("Lo logre??");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 100, -1, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1840, 850));
 
@@ -193,6 +198,10 @@ public class LoginAdministrador extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    public JLabel getjLabel14() {
+        return jLabel14;
+    }
 
     private void BotonloginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonloginActionPerformed
         String usuario = Nombreusuario.getText();
@@ -240,13 +249,12 @@ public class LoginAdministrador extends javax.swing.JFrame {
     private javax.swing.JTextField Identificacionusuario;
     private javax.swing.JTextField Nombreusuario;
     private javax.swing.JLabel Registrarse;
-    private java.awt.Canvas canvas1;
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
