@@ -15,6 +15,18 @@
         <maven.compiler.target>17</maven.compiler.target>
         <exec.mainClass>com.mycompany.proyecto_integrador1.Proyecto_Integrador1</exec.mainClass>
     </properties>
+    
+    <build>
+    <resources>
+        <resource>
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*</include>
+            </includes>
+        </resource>
+    </resources>
+</build>
+
 
     <dependencies>
         <!-- Dependencia MySQL 9.2.0 -->
