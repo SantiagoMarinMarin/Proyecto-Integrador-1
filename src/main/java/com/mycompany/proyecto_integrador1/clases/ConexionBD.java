@@ -170,6 +170,54 @@ public class ConexionBD {
     return exito;
 }
 
+    
+    public static void guardarEnTablaPorCargo(String nombre, String cargo, int tarjeton) {
+    Connection conexion = ConexionBD.conectar();
+    PreparedStatement pstmt = null;
+
+    try {
+       
+
+        // Selección dinámica de la tabla
+        String tabla = "";
+        switch (cargo.toLowerCase()) {
+            case "personero":
+                tabla = "personeria";
+                break;
+            case "contralor":
+                tabla = "contralor";
+                break;
+            case "representante":
+                tabla = "representante";
+                break;
+            case "mediador":
+                tabla = "mediador";
+                break;
+            default:
+                System.out.println("Cargo no reconocido: " + cargo);
+                return;
+        }
+
+        // Construir e insertar
+        String sql = "INSERT INTO " + tabla + " (nombre, cargo, tarjeton) VALUES (?, ?, ?)";
+        pstmt = conexion.prepareStatement(sql);
+        pstmt.setString(1, nombre);
+        pstmt.setString(2, cargo);
+        pstmt.setInt(3, tarjeton);
+        pstmt.executeUpdate();
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+    } finally {
+        try {
+            if (pstmt != null) pstmt.close();
+            if (conexion != null) conexion.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
 }
 
 

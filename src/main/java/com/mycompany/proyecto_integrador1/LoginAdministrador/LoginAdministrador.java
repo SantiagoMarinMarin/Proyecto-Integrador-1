@@ -13,8 +13,6 @@ public class LoginAdministrador extends javax.swing.JFrame {
 
     public LoginAdministrador() {
         initComponents();
-        ImageIcon icon = new ImageIcon(getClass().getResource("/Imagenes/Logo_principal_Login.png"));
-        Icono.setIcon(icon);
     }
 
   
@@ -41,7 +39,7 @@ public class LoginAdministrador extends javax.swing.JFrame {
         Registrarse = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        Icono = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -163,8 +161,8 @@ public class LoginAdministrador extends javax.swing.JFrame {
         jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 1090, 850));
         jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 130, -1, -1));
 
-        Icono.setIcon(new javax.swing.ImageIcon("C:\\Users\\Nicol Alejandra\\Documents\\NetBeansProjects\\Proyecto-Integrador-1\\src\\main\\java\\Imagenes_Niki\\Imagenes_p\\Logo_principal_Login.png")); // NOI18N
-        jPanel3.add(Icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
+        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Proyecto Integrador I\\Projecto-Integrador-I\\Projecto-Integrador-I\\Projecto-Integrador-I\\Proyecto-Integrador-1\\Imagenes_Niki\\Imagenes_p\\Logo_principal_Login.png")); // NOI18N
+        jPanel3.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, -1, -1));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1840, 850));
 
@@ -229,13 +227,13 @@ public class LoginAdministrador extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Botonlogin;
     private javax.swing.JPasswordField Contraseñausuario;
-    private javax.swing.JLabel Icono;
     private javax.swing.JTextField Identificacionusuario;
     private javax.swing.JTextField Nombreusuario;
     private javax.swing.JLabel Registrarse;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
