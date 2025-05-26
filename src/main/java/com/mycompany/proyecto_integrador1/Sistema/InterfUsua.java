@@ -36,11 +36,17 @@ public class InterfUsua extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jPasswordField1 = new javax.swing.JPasswordField();
         jTextField1 = new javax.swing.JTextField();
+        icongrisnombre4 = new javax.swing.JLabel();
+        icongrisnombre5 = new javax.swing.JLabel();
+        icongrisnombre1 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
+        iconpricipal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1540, 810));
 
         jPanel1.setBackground(new java.awt.Color(230, 243, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1540, 810));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
@@ -50,7 +56,7 @@ public class InterfUsua extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setText("Ingrese a su cuenta");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 120, 1090, 40));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 880, 40));
         jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 370, 202, -1));
 
         jLabel6.setBackground(new java.awt.Color(255, 255, 255));
@@ -81,15 +87,16 @@ public class InterfUsua extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(65, 90, 119));
         jButton1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ingrese para votar");
+        jButton1.setText("Ingrese para votar");
         jButton1.setBorder(null);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 650, 320, 40));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 640, 320, 40));
 
+        jPasswordField1.setBackground(new java.awt.Color(222, 227, 231));
         jPasswordField1.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         jPasswordField1.setBorder(null);
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
@@ -97,22 +104,38 @@ public class InterfUsua extends javax.swing.JFrame {
                 jPasswordField1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 480, 65));
+        jPanel2.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 300, 560, 65));
 
+        jTextField1.setBackground(new java.awt.Color(222, 227, 231));
         jTextField1.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         jTextField1.setBorder(null);
-        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 460, 560, 65));
+        jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 560, 65));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 1090, 850));
+        icongrisnombre4.setBackground(new java.awt.Color(0, 0, 0));
+        icongrisnombre4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_gris_claro.png"))); // NOI18N
+        jPanel2.add(icongrisnombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 300, 600, -1));
+
+        icongrisnombre5.setBackground(new java.awt.Color(0, 0, 0));
+        icongrisnombre5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_gris_claro.png"))); // NOI18N
+        jPanel2.add(icongrisnombre5, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 460, 600, -1));
+
+        icongrisnombre1.setBackground(new java.awt.Color(0, 0, 0));
+        icongrisnombre1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_azul_pequeño.png"))); // NOI18N
+        jPanel2.add(icongrisnombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 620, 340, 80));
+
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 0, 880, 810));
 
         jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/mycompany/proyecto_integrador1/LoginAdministrador/Imagenes/Black And White Modern Car Wash Logo (1) 1.png"))); // NOI18N
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, -1, -1));
+
+        iconpricipal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Logo_principal.png.png"))); // NOI18N
+        jPanel1.add(iconpricipal, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 150, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1540, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,6 +160,10 @@ public class InterfUsua extends javax.swing.JFrame {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel icongrisnombre1;
+    private javax.swing.JLabel icongrisnombre4;
+    private javax.swing.JLabel icongrisnombre5;
+    private javax.swing.JLabel iconpricipal;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel4;
