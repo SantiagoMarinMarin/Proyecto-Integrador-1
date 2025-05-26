@@ -18,7 +18,6 @@ public class RegistroAdministrador extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -26,8 +25,14 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         Nombreusuario = new javax.swing.JTextField();
         Contraseñausuario = new javax.swing.JPasswordField();
         Botonlogin = new javax.swing.JButton();
+        jLabel10 = new javax.swing.JLabel();
+        icongrisnombre2 = new javax.swing.JLabel();
+        icongrisnombre3 = new javax.swing.JLabel();
+        icongrisnombre4 = new javax.swing.JLabel();
+        icongrisnombre1 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -36,16 +41,6 @@ public class RegistroAdministrador extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel6.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel6.setText("<--");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 30));
 
         jLabel7.setBackground(new java.awt.Color(255, 255, 255));
         jLabel7.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
@@ -68,17 +63,17 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         Identificacionusuario.setBackground(new java.awt.Color(222, 227, 231));
         Identificacionusuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         Identificacionusuario.setBorder(null);
-        jPanel2.add(Identificacionusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 570, 65));
+        jPanel2.add(Identificacionusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, 550, 65));
 
         Nombreusuario.setBackground(new java.awt.Color(222, 227, 231));
         Nombreusuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         Nombreusuario.setBorder(null);
-        jPanel2.add(Nombreusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 570, 65));
+        jPanel2.add(Nombreusuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 550, 65));
 
         Contraseñausuario.setBackground(new java.awt.Color(222, 227, 231));
         Contraseñausuario.setFont(new java.awt.Font("Roboto", 0, 20)); // NOI18N
         Contraseñausuario.setBorder(null);
-        jPanel2.add(Contraseñausuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 570, 570, 65));
+        jPanel2.add(Contraseñausuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 570, 550, 65));
 
         Botonlogin.setBackground(new java.awt.Color(65, 90, 119));
         Botonlogin.setFont(new java.awt.Font("Roboto", 0, 26)); // NOI18N
@@ -92,38 +87,51 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         });
         jPanel2.add(Botonlogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 710, 320, 50));
 
-        jLabel9.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Registre su cuenta");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 1090, 40));
+        jLabel10.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel10.setText("Registre su cuenta");
+        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 880, 40));
 
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        icongrisnombre2.setBackground(new java.awt.Color(0, 0, 0));
+        icongrisnombre2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_gris_claro.png"))); // NOI18N
+        jPanel2.add(icongrisnombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 570, 610, -1));
+
+        icongrisnombre3.setBackground(new java.awt.Color(0, 0, 0));
+        icongrisnombre3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_gris_claro.png"))); // NOI18N
+        jPanel2.add(icongrisnombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 610, -1));
+
+        icongrisnombre4.setBackground(new java.awt.Color(0, 0, 0));
+        icongrisnombre4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_gris_claro.png"))); // NOI18N
+        jPanel2.add(icongrisnombre4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 410, 610, -1));
+
+        icongrisnombre1.setBackground(new java.awt.Color(0, 0, 0));
+        icongrisnombre1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_azul_pequeño.png"))); // NOI18N
+        jPanel2.add(icongrisnombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 700, 340, 70));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_atras.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel3MouseClicked(evt);
+                jLabel1MouseClicked(evt);
             }
         });
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 120, Short.MAX_VALUE)
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
-        );
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 810));
 
-        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 120, 40));
+        jLabel9.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1540, 30, -1, 40));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1090, 850));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Logo_principal.png.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 140, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1835, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 295, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -149,17 +157,10 @@ public class RegistroAdministrador extends javax.swing.JFrame {
     }
     }//GEN-LAST:event_BotonloginActionPerformed
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         LoginAdministrador login = new LoginAdministrador();
         login.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jLabel6MouseClicked
-
-    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
-        LoginAdministrador login = new LoginAdministrador();
-        login.setVisible(true);
-        dispose();
-    }//GEN-LAST:event_jPanel3MouseClicked
+    }//GEN-LAST:event_jLabel1MouseClicked
 
    
 
@@ -168,13 +169,18 @@ public class RegistroAdministrador extends javax.swing.JFrame {
     private javax.swing.JPasswordField Contraseñausuario;
     private javax.swing.JTextField Identificacionusuario;
     private javax.swing.JTextField Nombreusuario;
+    private javax.swing.JLabel icongrisnombre1;
+    private javax.swing.JLabel icongrisnombre2;
+    private javax.swing.JLabel icongrisnombre3;
+    private javax.swing.JLabel icongrisnombre4;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
