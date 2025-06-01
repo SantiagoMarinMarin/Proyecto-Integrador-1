@@ -72,6 +72,50 @@ public class ConexionBD {
     return accesoPermitido;
 }
     
+public static boolean validarLoginParaEstudiantes(String identificacion, String codigoVotacion) {
+     boolean accesoPermitido = false;
+    Connection conexion = ConexionBD.conectar();
+    String sql = "SELECT * FROM estudiantes WHERE identificacion = ? AND codigo_votacion = ? AND estado = 'ACTIVO'";
+
+    try {
+        PreparedStatement ps = conexion.prepareStatement(sql);
+        ps.setString(1, identificacion);
+        ps.setString(2, codigoVotacion);
+
+        ResultSet rs = ps.executeQuery();
+
+        if (rs.next()) { 
+            accesoPermitido = true;
+            System.out.println("✅ Estudiante válido y ACTIVO encontrado");
+
+            // Cambiar el estado a INACTIVO después de validar
+            String actualizarEstadoSQL = "UPDATE estudiantes SET estado = 'INACTIVO' WHERE identificacion = ?";
+            PreparedStatement actualizar = conexion.prepareStatement(actualizarEstadoSQL);
+            actualizar.setString(1, identificacion);
+            int actualizado = actualizar.executeUpdate();
+
+            if (actualizado > 0) {
+                System.out.println("Estado cambiado a INACTIVO");
+            } else {
+                System.out.println(" No se pudo cambiar el estado del estudiante");
+            }
+
+            actualizar.close();
+        } else {
+            System.out.println("Estudiante no encontrado o no está ACTIVO");
+        }
+
+        conexion.close();
+    } catch (Exception e) {
+        JOptionPane.showMessageDialog(null, "Error en el login: " + e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+    }
+
+    return accesoPermitido;
+}
+
+    
+    
+    
     public static boolean registrarAdmin(String usuario, String identificacion, String contraseña) {
         boolean registrado = false;
         Connection conexion = ConexionBD.conectar();
@@ -122,9 +166,9 @@ public class ConexionBD {
                 stmt.setString(2, cargo);
                 stmt.setInt(3, tarjeton);
                 stmt.executeUpdate();
-                System.out.println("✅ Candidato registrado con éxito");
+                System.out.println("Candidato registrado con éxito");
             } catch (SQLException e) {
-                System.out.println("❌ Error al registrar candidato: " + e.getMessage());
+                System.out.println("Error al registrar candidato: " + e.getMessage());
             }
         }  
     }
@@ -217,6 +261,30 @@ public class ConexionBD {
         }
     }
 }
+    
+     public static boolean guardarEstudiante(int identificacion, String nombre1, String nombre2, String apellido1, String apellido2, String curso, String codigoVotacion) {
+    Connection conexion = ConexionBD.conectar(); // ¡Faltaba esta línea!
+    String sql = "INSERT INTO estudiantes (identificacion, nombre1, nombre2, apellido1, apellido2, curso, codigo_votacion, estado) VALUES (?, ?, ?, ?, ?, ?, ?, 'ACTIVO')";
+
+    try (PreparedStatement pst = conexion.prepareStatement(sql)) {
+        pst.setInt(1, identificacion);
+        pst.setString(2, nombre1);
+        pst.setString(3, nombre2.isEmpty() ? null : nombre2);
+        pst.setString(4, apellido1);
+        pst.setString(5, apellido2.isEmpty() ? null : apellido2);
+        pst.setString(6, curso);
+        pst.setString(7, codigoVotacion);
+
+        int filas = pst.executeUpdate();
+        return filas > 0;
+    } catch (SQLException e) {
+        System.err.println("Error al guardar estudiante: " + e.getMessage());
+        return false;
+    } finally {
+        cerrarConexion(conexion); // Cierra la conexión correctamente
+    }
+}
+
 
 }
 

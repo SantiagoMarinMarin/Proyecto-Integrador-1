@@ -28,7 +28,6 @@ public class CandidateForm extends javax.swing.JFrame {
         cbCargo = new javax.swing.JComboBox<>();
         LabelTarjetón = new javax.swing.JLabel();
         txtTarjeton = new javax.swing.JTextField();
-        btnRegistrar = new javax.swing.JButton();
         jLabel9 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
@@ -40,8 +39,9 @@ public class CandidateForm extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabelNombre1.setText("Nombre");
-        jPanel1.add(LabelNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 470, -1, -1));
+        LabelNombre1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        LabelNombre1.setText("Apellido");
+        jPanel1.add(LabelNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 460, -1, -1));
 
         LabelRegistrarcandidato1.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
         LabelRegistrarcandidato1.setForeground(new java.awt.Color(255, 255, 255));
@@ -53,18 +53,20 @@ public class CandidateForm extends javax.swing.JFrame {
         LabelRegistrarcandidato.setText("Candidato:");
         jPanel1.add(LabelRegistrarcandidato, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
+        LabelNombre.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         LabelNombre.setText("Nombre");
-        jPanel1.add(LabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, -1, -1));
+        jPanel1.add(LabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, -1));
 
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 470, 71, -1));
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 460, 270, 50));
 
+        LabelCargo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         LabelCargo.setText("Cargo:");
-        jPanel1.add(LabelCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, -1, -1));
+        jPanel1.add(LabelCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 540, -1, -1));
 
         txtNombre1.setBackground(new java.awt.Color(222, 227, 231));
         txtNombre1.setBorder(null);
@@ -88,22 +90,10 @@ public class CandidateForm extends javax.swing.JFrame {
         });
         jPanel1.add(cbCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 530, 360, 65));
 
+        LabelTarjetón.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         LabelTarjetón.setText("Tarjetón:");
-        jPanel1.add(LabelTarjetón, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 550, -1, -1));
-        jPanel1.add(txtTarjeton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 560, 71, -1));
-
-        btnRegistrar.setText("Registrar");
-        btnRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                btnRegistrarMouseClicked(evt);
-            }
-        });
-        btnRegistrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnRegistrarActionPerformed(evt);
-            }
-        });
-        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 630, -1, -1));
+        jPanel1.add(LabelTarjetón, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, -1, -1));
+        jPanel1.add(txtTarjeton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 542, 270, 50));
 
         jLabel9.setForeground(new java.awt.Color(0, 51, 204));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -117,6 +107,11 @@ public class CandidateForm extends javax.swing.JFrame {
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registar_candidatos/registrar.png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 700, -1, 80));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registar_candidatos/candidato.png"))); // NOI18N
@@ -144,21 +139,17 @@ public class CandidateForm extends javax.swing.JFrame {
     
     }//GEN-LAST:event_txtNombreActionPerformed
 
-    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
+    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombre1ActionPerformed
 
-    }//GEN-LAST:event_btnRegistrarActionPerformed
-
-    private void btnRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMouseClicked
-        String nombre = txtNombre.getText();
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+          String nombre = txtNombre.getText();
         String cargo = cbCargo.getSelectedItem().toString();
         int tarjeton = Integer.parseInt(txtTarjeton.getText());
 
         ConexionBD.guardarEnTablaPorCargo(nombre, cargo, tarjeton);
-    }//GEN-LAST:event_btnRegistrarMouseClicked
-
-    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtNombre1ActionPerformed
+    }//GEN-LAST:event_jLabel6MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -168,7 +159,6 @@ public class CandidateForm extends javax.swing.JFrame {
     private javax.swing.JLabel LabelRegistrarcandidato;
     private javax.swing.JLabel LabelRegistrarcandidato1;
     private javax.swing.JLabel LabelTarjetón;
-    private javax.swing.JButton btnRegistrar;
     private javax.swing.JComboBox<String> cbCargo;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

@@ -210,8 +210,6 @@ public class LoginAdministrador extends javax.swing.JFrame {
         String contraseña = new String(Contraseñausuario.getPassword());
 
         if (validarLogin(usuario, identificacion, contraseña)) {
-            JOptionPane.showMessageDialog(this, "¡Login exitoso!", "Bienvenido", JOptionPane.INFORMATION_MESSAGE);
-
             registrarAcceso(usuario, identificacion);
             AdminInterface admin = new AdminInterface();
             admin.setVisible(true);
