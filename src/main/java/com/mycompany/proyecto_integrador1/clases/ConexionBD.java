@@ -15,9 +15,9 @@ import javax.swing.JOptionPane;
 public class ConexionBD {
   
 
-    private static final String URL = "jdbc:mysql://localhost:3306/dbsve"; // Cambia por el nombre de tu BD
-    private static final String USUARIO = "root";  // Tu usuario de MySQL
-    private static final String CONTRASEÑA = "Polasana2020";   // Si tienes contraseña, colócala aquí
+    private static final String URL = "jdbc:mysql://localhost:3306/dbsve"; 
+    private static final String USUARIO = "root"; 
+    private static final String CONTRASEÑA = "Polasana2020"; 
 
     public static Connection conectar() {
         Connection conexion = null;
@@ -89,7 +89,7 @@ public static boolean validarLoginParaEstudiantes(String identificacion, String 
             System.out.println("✅ Estudiante válido y ACTIVO encontrado");
 
             // Cambiar el estado a INACTIVO después de validar
-            String actualizarEstadoSQL = "UPDATE estudiantes SET estado = 'INACTIVO' WHERE identificacion = ?";
+            /*String actualizarEstadoSQL = "UPDATE estudiantes SET estado = 'INACTIVO' WHERE identificacion = ?";
             PreparedStatement actualizar = conexion.prepareStatement(actualizarEstadoSQL);
             actualizar.setString(1, identificacion);
             int actualizado = actualizar.executeUpdate();
@@ -100,7 +100,7 @@ public static boolean validarLoginParaEstudiantes(String identificacion, String 
                 System.out.println(" No se pudo cambiar el estado del estudiante");
             }
 
-            actualizar.close();
+            actualizar.close();*/
         } else {
             System.out.println("Estudiante no encontrado o no está ACTIVO");
         }

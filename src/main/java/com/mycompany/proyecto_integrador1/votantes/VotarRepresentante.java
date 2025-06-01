@@ -7,6 +7,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
@@ -27,7 +29,7 @@ public class VotarRepresentante extends javax.swing.JFrame {
         jTable1.setModel(modelo); // Asegúrate de que este sea el nombre de tu JTable
 
     Connection conexion = ConexionBD.conectar();
-    String sql = "SELECT * FROM mediador ORDER BY tarjeton ASC";
+    String sql = "SELECT * FROM representante ORDER BY tarjeton ASC";
 
     try {
         PreparedStatement ps = conexion.prepareStatement(sql);
@@ -151,32 +153,59 @@ public class VotarRepresentante extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        String votoStr = jTextField1.getText().trim();
+         String votoStr = jTextField1.getText().trim();
 
-        if (votoStr.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Por favor ingrese un número válido.");
-            return;
+    if (votoStr.isEmpty()) {
+        JOptionPane.showMessageDialog(this, "Por favor ingrese un número válido.");
+        return;
+    }
+
+    int voto;
+    try {
+        voto = Integer.parseInt(votoStr);
+    } catch (NumberFormatException e) {
+        JOptionPane.showMessageDialog(this, "El voto debe ser un número.");
+        return;
+    }
+
+    // Obtener todos los tarjetones válidos desde la base de datos
+    List<Integer> tarjetonesValidos = new ArrayList<>();
+    String sql = "SELECT tarjeton FROM representante";
+
+    try (Connection conexion = ConexionBD.conectar();
+         PreparedStatement pst = conexion.prepareStatement(sql);
+         ResultSet rs = pst.executeQuery()) {
+
+        while (rs.next()) {
+            tarjetonesValidos.add(rs.getInt("tarjeton"));
         }
 
-        int voto;
-        try {
-            voto = Integer.parseInt(votoStr);
-        } catch (NumberFormatException e) {
-            JOptionPane.showMessageDialog(this, "El voto debe ser un número.");
-            return;
-        }
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, "Error al obtener los tarjetones válidos: " + e.getMessage());
+        return;
+    }
 
-        // Lógica para insertar el voto en la base de datos
-        String sql = "INSERT INTO votosrepresentante (votado) VALUES (?)";
-        Connection conexion = ConexionBD.conectar();
+    // Validar que el voto esté en la lista de tarjetones válidos
+    if (!tarjetonesValidos.contains(voto)) {
+        JOptionPane.showMessageDialog(this, "Por favor ingrese un número de tarjetón válido.");
+        return;
+    }
 
-        try (PreparedStatement pst = conexion.prepareStatement(sql)) {
-            pst.setInt(1, voto);
-            pst.executeUpdate();
+    // Insertar el voto si es válido
+    String sqlInsert = "INSERT INTO votosrepresentante (votado) VALUES (?)";
 
-        } catch (SQLException e) {
-            JOptionPane.showMessageDialog(this, "❌ Error al registrar el voto: " + e.getMessage());
-        }
+    try (Connection conexion = ConexionBD.conectar();
+         PreparedStatement pstInsert = conexion.prepareStatement(sqlInsert)) {
+
+        pstInsert.setInt(1, voto);
+        pstInsert.executeUpdate();
+
+        JOptionPane.showMessageDialog(this, "Voto registrado correctamente.");
+
+    } catch (SQLException e) {
+        JOptionPane.showMessageDialog(this, "❌ Error al registrar el voto: " + e.getMessage());
+        return;
+    }
         
         InterfUsua usuario = new InterfUsua();
         usuario.setVisible(true);
