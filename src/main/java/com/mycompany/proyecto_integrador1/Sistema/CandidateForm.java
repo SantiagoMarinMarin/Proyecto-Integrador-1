@@ -144,11 +144,14 @@ public class CandidateForm extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNombre1ActionPerformed
 
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
-          String nombre = txtNombre.getText();
-        String cargo = cbCargo.getSelectedItem().toString();
-        int tarjeton = Integer.parseInt(txtTarjeton.getText());
+String nombre1 = txtNombre1.getText().trim();
+String nombre2 = txtNombre.getText().trim();
 
-        ConexionBD.guardarEnTablaPorCargo(nombre, cargo, tarjeton);
+String nombreCompleto = nombre1 + " " + nombre2;  // Nombres separados con espacio
+String cargo = cbCargo.getSelectedItem().toString();
+int tarjeton = Integer.parseInt(txtTarjeton.getText());
+
+ConexionBD.guardarEnTablaPorCargo(nombreCompleto, cargo, tarjeton);
     }//GEN-LAST:event_jLabel6MouseClicked
 
 
