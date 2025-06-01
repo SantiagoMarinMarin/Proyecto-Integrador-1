@@ -157,6 +157,7 @@ public class AdminInterface extends javax.swing.JFrame {
         frame.pack();
         frame.setLocationRelativeTo(null);
         frame.setVisible(true);
+        dispose();
     }//GEN-LAST:event_btnAbrirConfiguracionActionPerformed
 
     private void btnIniciarVotacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarVotacionesActionPerformed
@@ -168,6 +169,7 @@ public class AdminInterface extends javax.swing.JFrame {
             iniciovotacion = new InterfUsua();
         }
         iniciovotacion.setVisible(true); // La mostramos
+        dispose();
     }//GEN-LAST:event_btnIniciarVotacionesMouseClicked
 
     private void btnCerrarVotacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCerrarVotacionesActionPerformed
