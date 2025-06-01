@@ -28,94 +28,124 @@ public class RegistrarVotantes extends javax.swing.JFrame {
 
         jLabel8 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jButton2 = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        Tprimernombre = new javax.swing.JTextField();
+        Tprimerapellido = new javax.swing.JTextField();
+        TIdentificacion = new javax.swing.JTextField();
+        Tcrearcodigo = new javax.swing.JTextField();
+        TSegundonombre = new javax.swing.JTextField();
+        Tsegundoapellido = new javax.swing.JTextField();
+        Tcurso = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1540, 810));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_atras.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, -1));
+
         jLabel9.setForeground(new java.awt.Color(0, 51, 204));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel9.setText("Registrar Votantes");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 23, 143, 22));
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registra_votanates/sveazul.png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, 160));
 
-        jLabel3.setText(" Primer Nombre");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, -1, -1));
-
-        jLabel5.setText("Primer Apellido");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        Tprimernombre.setBackground(new java.awt.Color(222, 227, 231));
+        Tprimernombre.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        Tprimernombre.setBorder(null);
+        Tprimernombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                TprimernombreActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 100, 90, -1));
-        jPanel1.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 150, 90, -1));
+        jPanel1.add(Tprimernombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 300, 340, 60));
 
-        jLabel6.setText("identificacion");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, -1, -1));
-
-        jLabel4.setText("crear codigo");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
-        jPanel1.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 90, -1));
-        jPanel1.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 106, -1));
-
-        jLabel1.setText("Segundo Nombre");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
-
-        jLabel7.setText("Segundo Apellido");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 160, -1, -1));
-        jPanel1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 70, -1));
-        jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 160, 69, -1));
-
-        jLabel2.setText("Curso");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, -1, -1));
-        jPanel1.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 69, 22));
-
-        jButton2.setText("Guardar Cambios");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Tprimerapellido.setBackground(new java.awt.Color(222, 227, 231));
+        Tprimerapellido.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        Tprimerapellido.setBorder(null);
+        Tprimerapellido.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                TprimerapellidoActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 560, -1, -1));
+        jPanel1.add(Tprimerapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 390, 340, 60));
 
-        jButton1.setText("atrás");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        TIdentificacion.setBackground(new java.awt.Color(222, 227, 231));
+        TIdentificacion.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        TIdentificacion.setBorder(null);
+        TIdentificacion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                TIdentificacionActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 10, -1, -1));
+        jPanel1.add(TIdentificacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 470, 340, 60));
+
+        Tcrearcodigo.setBackground(new java.awt.Color(222, 227, 231));
+        Tcrearcodigo.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        Tcrearcodigo.setBorder(null);
+        Tcrearcodigo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TcrearcodigoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Tcrearcodigo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 550, 340, 60));
+
+        TSegundonombre.setBackground(new java.awt.Color(222, 227, 231));
+        TSegundonombre.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        TSegundonombre.setBorder(null);
+        TSegundonombre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TSegundonombreActionPerformed(evt);
+            }
+        });
+        jPanel1.add(TSegundonombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 290, 340, 60));
+
+        Tsegundoapellido.setBackground(new java.awt.Color(222, 227, 231));
+        Tsegundoapellido.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        Tsegundoapellido.setBorder(null);
+        Tsegundoapellido.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TsegundoapellidoActionPerformed(evt);
+            }
+        });
+        jPanel1.add(Tsegundoapellido, new org.netbeans.lib.awtextra.AbsoluteConstraints(1110, 380, 340, 60));
+
+        Tcurso.setBackground(new java.awt.Color(222, 227, 231));
+        Tcurso.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
+        Tcurso.setBorder(null);
+        jPanel1.add(Tcurso, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 468, 340, 60));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registra_votanates/segundos.png"))); // NOI18N
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 290, -1, -1));
+
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registra_votanates/primeros.png"))); // NOI18N
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, -1));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registra_votanates/registrar.png"))); // NOI18N
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 170, -1, -1));
+
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registra_votanates/Guardar_cambiosfghbjnkml,.png"))); // NOI18N
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(1210, 710, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1845, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1540, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel8))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -123,46 +153,58 @@ public class RegistrarVotantes extends javax.swing.JFrame {
                 .addGap(57, 57, 57)
                 .addComponent(jLabel8)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 850, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+    private void TprimernombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TprimernombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    }//GEN-LAST:event_TprimernombreActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void TcrearcodigoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TcrearcodigoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TcrearcodigoActionPerformed
+
+    private void TsegundoapellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TsegundoapellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TsegundoapellidoActionPerformed
+
+    private void TIdentificacionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TIdentificacionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TIdentificacionActionPerformed
+
+    private void TSegundonombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TSegundonombreActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TSegundonombreActionPerformed
+
+    private void TprimerapellidoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TprimerapellidoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TprimerapellidoActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
         ConfigPanel atrasPanel= new ConfigPanel();
         atrasPanel.setVisible(true);
         dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jLabel1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JTextField TIdentificacion;
+    private javax.swing.JTextField TSegundonombre;
+    private javax.swing.JTextField Tcrearcodigo;
+    private javax.swing.JTextField Tcurso;
+    private javax.swing.JTextField Tprimerapellido;
+    private javax.swing.JTextField Tprimernombre;
+    private javax.swing.JTextField Tsegundoapellido;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
     // End of variables declaration//GEN-END:variables
 }

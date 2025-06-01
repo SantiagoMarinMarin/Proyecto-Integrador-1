@@ -18,47 +18,79 @@ public class CandidateForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        LabelNombre1 = new javax.swing.JLabel();
+        LabelRegistrarcandidato1 = new javax.swing.JLabel();
         LabelRegistrarcandidato = new javax.swing.JLabel();
         LabelNombre = new javax.swing.JLabel();
         txtNombre = new javax.swing.JTextField();
         LabelCargo = new javax.swing.JLabel();
+        txtNombre1 = new javax.swing.JTextField();
         cbCargo = new javax.swing.JComboBox<>();
         LabelTarjetón = new javax.swing.JLabel();
         txtTarjeton = new javax.swing.JTextField();
         btnRegistrar = new javax.swing.JButton();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabelRegistrarcandidato.setText("Registrar Candidato");
-        jPanel1.add(LabelRegistrarcandidato, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 16, -1, -1));
+        LabelNombre1.setText("Nombre");
+        jPanel1.add(LabelNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 470, -1, -1));
+
+        LabelRegistrarcandidato1.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
+        LabelRegistrarcandidato1.setForeground(new java.awt.Color(255, 255, 255));
+        LabelRegistrarcandidato1.setText("Registrar Candidato");
+        jPanel1.add(LabelRegistrarcandidato1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 200, -1, -1));
+
+        LabelRegistrarcandidato.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
+        LabelRegistrarcandidato.setForeground(new java.awt.Color(255, 255, 255));
+        LabelRegistrarcandidato.setText("Candidato:");
+        jPanel1.add(LabelRegistrarcandidato, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
         LabelNombre.setText("Nombre");
-        jPanel1.add(LabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, -1, -1));
+        jPanel1.add(LabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 460, -1, -1));
 
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 71, -1));
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(1230, 470, 71, -1));
 
         LabelCargo.setText("Cargo:");
-        jPanel1.add(LabelCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
+        jPanel1.add(LabelCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, -1, -1));
 
+        txtNombre1.setBackground(new java.awt.Color(222, 227, 231));
+        txtNombre1.setBorder(null);
+        txtNombre1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNombre1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(txtNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 443, 340, 60));
+
+        cbCargo.setBackground(new java.awt.Color(222, 227, 231));
+        cbCargo.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         cbCargo.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Personero", "Mediador", "Contralor", "Representante" }));
+        cbCargo.setBorder(null);
+        cbCargo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        cbCargo.setKeySelectionManager(null);
         cbCargo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbCargoActionPerformed(evt);
             }
         });
-        jPanel1.add(cbCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 100, -1, -1));
+        jPanel1.add(cbCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 530, 360, 65));
 
         LabelTarjetón.setText("Tarjetón:");
-        jPanel1.add(LabelTarjetón, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, -1));
-        jPanel1.add(txtTarjeton, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 140, 71, -1));
+        jPanel1.add(LabelTarjetón, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 550, -1, -1));
+        jPanel1.add(txtTarjeton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 560, 71, -1));
 
         btnRegistrar.setText("Registrar");
         btnRegistrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -71,25 +103,38 @@ public class CandidateForm extends javax.swing.JFrame {
                 btnRegistrarActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jPanel1.add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 630, -1, -1));
+
+        jLabel9.setForeground(new java.awt.Color(0, 51, 204));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registra_votanates/sveazul.png"))); // NOI18N
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, 160));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registar_candidatos/Group 19.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 430, -1, 170));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registar_candidatos/candidato_l.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 170, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registar_candidatos/registrar.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1310, 700, -1, 80));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/registar_candidatos/candidato.png"))); // NOI18N
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 295, -1, 80));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 353, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
-                                  
-    }//GEN-LAST:event_btnRegistrarActionPerformed
 
     private void cbCargoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCargoActionPerformed
  
@@ -99,24 +144,40 @@ public class CandidateForm extends javax.swing.JFrame {
     
     }//GEN-LAST:event_txtNombreActionPerformed
 
-    private void btnRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMouseClicked
-    String nombre = txtNombre.getText();
-    String cargo = cbCargo.getSelectedItem().toString();  
-    int tarjeton = Integer.parseInt(txtTarjeton.getText());
+    private void btnRegistrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarActionPerformed
 
-    ConexionBD.guardarEnTablaPorCargo(nombre, cargo, tarjeton);
+    }//GEN-LAST:event_btnRegistrarActionPerformed
+
+    private void btnRegistrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarMouseClicked
+        String nombre = txtNombre.getText();
+        String cargo = cbCargo.getSelectedItem().toString();
+        int tarjeton = Integer.parseInt(txtTarjeton.getText());
+
+        ConexionBD.guardarEnTablaPorCargo(nombre, cargo, tarjeton);
     }//GEN-LAST:event_btnRegistrarMouseClicked
+
+    private void txtNombre1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNombre1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNombre1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelCargo;
     private javax.swing.JLabel LabelNombre;
+    private javax.swing.JLabel LabelNombre1;
     private javax.swing.JLabel LabelRegistrarcandidato;
+    private javax.swing.JLabel LabelRegistrarcandidato1;
     private javax.swing.JLabel LabelTarjetón;
     private javax.swing.JButton btnRegistrar;
     private javax.swing.JComboBox<String> cbCargo;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txtNombre1;
     private javax.swing.JTextField txtTarjeton;
     // End of variables declaration//GEN-END:variables
 }
