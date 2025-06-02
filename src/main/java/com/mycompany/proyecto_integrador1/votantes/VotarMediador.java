@@ -130,12 +130,14 @@ public class VotarMediador extends javax.swing.JFrame {
         });
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 650, -1, -1));
 
+        jTextField1.setBackground(new java.awt.Color(58, 134, 255));
+        jTextField1.setBorder(null);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextField1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 650, 180, 50));
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 640, 210, 60));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/votantes/Voto.png"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 640, -1, -1));

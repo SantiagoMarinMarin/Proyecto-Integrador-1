@@ -130,7 +130,10 @@ public class VotarPersonero extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 630, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 650, 170, 40));
+
+        jTextField1.setBackground(new java.awt.Color(58, 134, 255));
+        jTextField1.setBorder(null);
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 640, 180, 60));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/votantes/Voto.png"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 640, -1, -1));

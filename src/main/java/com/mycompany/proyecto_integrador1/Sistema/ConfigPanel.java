@@ -3,10 +3,12 @@ package com.mycompany.proyecto_integrador1.Sistema;
 
 import com.mycompany.proyecto_integrador1.LoginAdministrador.LoginAdministrador;
 import com.mycompany.proyecto_integrador1.Sistema.CandidateForm;
+import java.awt.Window;
 import javax.swing.JButton;   // Importación para JButton
 import javax.swing.JFrame;    // Importación para JFrame
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;  
+import javax.swing.SwingUtilities;
 
 public class ConfigPanel extends javax.swing.JPanel {
 private JButton btnGestionCandidatos, btnAdminVotaciones;
@@ -26,41 +28,65 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        btnRegistrarVotantes1 = new javax.swing.JButton();
         btnCrearCandidatos = new javax.swing.JButton();
         btnRegistrarVotantes = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setMinimumSize(new java.awt.Dimension(1562, 850));
         jPanel1.setPreferredSize(new java.awt.Dimension(1845, 450));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/votantes/Candidatos.png"))); // NOI18N
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 510, -1, 120));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_atras.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 70));
+
+        btnRegistrarVotantes1.setBackground(new java.awt.Color(65, 90, 119));
+        btnRegistrarVotantes1.setFont(new java.awt.Font("Roboto", 1, 28)); // NOI18N
+        btnRegistrarVotantes1.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegistrarVotantes1.setText("Registrar Votantes");
+        btnRegistrarVotantes1.setBorder(null);
+        btnRegistrarVotantes1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        btnRegistrarVotantes1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegistrarVotantes1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnRegistrarVotantes1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 625, 291, 107));
 
         btnCrearCandidatos.setBackground(new java.awt.Color(58, 134, 255));
-        btnCrearCandidatos.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
+        btnCrearCandidatos.setFont(new java.awt.Font("Roboto", 1, 28)); // NOI18N
+        btnCrearCandidatos.setForeground(new java.awt.Color(255, 255, 255));
         btnCrearCandidatos.setText("Registrar Candidatos");
         btnCrearCandidatos.setToolTipText("");
         btnCrearCandidatos.setBorder(null);
         btnCrearCandidatos.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         btnCrearCandidatos.setVerifyInputWhenFocusTarget(false);
+        btnCrearCandidatos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnCrearCandidatosMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                btnCrearCandidatosMouseEntered(evt);
+            }
+        });
         btnCrearCandidatos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCrearCandidatosActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCrearCandidatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 530, 310, 80));
+        jPanel1.add(btnCrearCandidatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 445, 291, 107));
 
-        btnRegistrarVotantes.setBackground(new java.awt.Color(65, 90, 119));
-        btnRegistrarVotantes.setFont(new java.awt.Font("Roboto", 1, 30)); // NOI18N
+        btnRegistrarVotantes.setBackground(new java.awt.Color(58, 134, 255));
+        btnRegistrarVotantes.setFont(new java.awt.Font("Roboto", 1, 28)); // NOI18N
+        btnRegistrarVotantes.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrarVotantes.setText("Registrar Votantes");
         btnRegistrarVotantes.setBorder(null);
         btnRegistrarVotantes.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -69,7 +95,7 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
                 btnRegistrarVotantesActionPerformed(evt);
             }
         });
-        jPanel1.add(btnRegistrarVotantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 530, 280, 80));
+        jPanel1.add(btnRegistrarVotantes, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 445, 291, 107));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -84,45 +110,18 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 400, 660, -1));
 
-        jPanel3.setBackground(new java.awt.Color(230, 243, 255));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Logo_Segundario.png"))); // NOI18N
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 470, 370));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_atras.png"))); // NOI18N
-        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel2MouseClicked(evt);
-            }
-        });
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 100, -1));
-
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, -10, 1860, 350));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Icon_School.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 510, -1, 120));
-
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_azul_oscuro_GRANDE_2.png"))); // NOI18N
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 510, -1, 120));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/boton_azul_claro_Gramde.png"))); // NOI18N
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 510, -1, 120));
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Conf/Group 1.png"))); // NOI18N
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1562, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1539, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 850, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -142,23 +141,35 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
         candidateForm.setVisible(true);
     }//GEN-LAST:event_btnCrearCandidatosActionPerformed
 
-    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
-        InterfUsua usu = new InterfUsua();
-        usu.setVisible(true);
-    }//GEN-LAST:event_jLabel2MouseClicked
+    private void btnRegistrarVotantes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegistrarVotantes1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRegistrarVotantes1ActionPerformed
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        ConfigPanel atrasPanel= new ConfigPanel();
+        atrasPanel.setVisible(true);
+        Window window = SwingUtilities.getWindowAncestor(this);
+        if (window != null) {
+        window.dispose();
+}
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void btnCrearCandidatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCandidatosMouseClicked
+        
+    }//GEN-LAST:event_btnCrearCandidatosMouseClicked
+
+    private void btnCrearCandidatosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCandidatosMouseEntered
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCrearCandidatosMouseEntered
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCrearCandidatos;
     private javax.swing.JButton btnRegistrarVotantes;
+    private javax.swing.JButton btnRegistrarVotantes1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }
