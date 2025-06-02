@@ -3,6 +3,7 @@ package com.mycompany.proyecto_integrador1.Sistema;
 
 import com.mycompany.proyecto_integrador1.LoginAdministrador.LoginAdministrador;
 import com.mycompany.proyecto_integrador1.Sistema.CandidateForm;
+import com.mycompany.proyecto_integrador1.clases.ConexionBD;
 import java.awt.Window;
 import javax.swing.JButton;   // Importación para JButton
 import javax.swing.JFrame;    // Importación para JFrame
@@ -51,9 +52,14 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
         btnRegistrarVotantes1.setBackground(new java.awt.Color(65, 90, 119));
         btnRegistrarVotantes1.setFont(new java.awt.Font("Roboto", 1, 28)); // NOI18N
         btnRegistrarVotantes1.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegistrarVotantes1.setText("Registrar Votantes");
+        btnRegistrarVotantes1.setText("Actualizar Datos");
         btnRegistrarVotantes1.setBorder(null);
         btnRegistrarVotantes1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        btnRegistrarVotantes1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnRegistrarVotantes1MouseClicked(evt);
+            }
+        });
         btnRegistrarVotantes1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegistrarVotantes1ActionPerformed(evt);
@@ -111,7 +117,7 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 400, 660, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Conf/Group 1.png"))); // NOI18N
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1540, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -161,6 +167,13 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
     private void btnCrearCandidatosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCandidatosMouseEntered
         // TODO add your handling code here:
     }//GEN-LAST:event_btnCrearCandidatosMouseEntered
+
+    private void btnRegistrarVotantes1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnRegistrarVotantes1MouseClicked
+       int opcion = JOptionPane.showConfirmDialog(null, "¿Estás seguro de vaciar todas las tablas?", "Confirmar", JOptionPane.YES_NO_OPTION);
+          if (opcion == JOptionPane.YES_OPTION) {
+              ConexionBD.vaciarTablas(); 
+        }        
+    }//GEN-LAST:event_btnRegistrarVotantes1MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

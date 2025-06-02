@@ -88,8 +88,7 @@ public static boolean validarLoginParaEstudiantes(String identificacion, String 
             accesoPermitido = true;
             System.out.println("✅ Estudiante válido y ACTIVO encontrado");
 
-            // Cambiar el estado a INACTIVO después de validar
-            /*String actualizarEstadoSQL = "UPDATE estudiantes SET estado = 'INACTIVO' WHERE identificacion = ?";
+            String actualizarEstadoSQL = "UPDATE estudiantes SET estado = 'INACTIVO' WHERE identificacion = ?";
             PreparedStatement actualizar = conexion.prepareStatement(actualizarEstadoSQL);
             actualizar.setString(1, identificacion);
             int actualizado = actualizar.executeUpdate();
@@ -100,7 +99,7 @@ public static boolean validarLoginParaEstudiantes(String identificacion, String 
                 System.out.println(" No se pudo cambiar el estado del estudiante");
             }
 
-            actualizar.close();*/
+            actualizar.close();
         } else {
             System.out.println("Estudiante no encontrado o no está ACTIVO");
         }
@@ -113,7 +112,35 @@ public static boolean validarLoginParaEstudiantes(String identificacion, String 
     return accesoPermitido;
 }
 
-    
+public static void vaciarTablas() {
+    Connection con = null;
+    PreparedStatement ps = null;
+
+    String[] tablas = {"contralor", "estudiantes", "mediador", "personeria", "representante", "votoscontralor","votosmediador","votospersoneria","votosrepresentante"}; 
+
+    try {
+        con = DriverManager.getConnection(URL, USUARIO, CONTRASEÑA);
+
+        for (String tabla : tablas) {
+            String sql = "DELETE FROM " + tabla; 
+            ps = con.prepareStatement(sql);
+            ps.executeUpdate();
+        }
+
+        JOptionPane.showMessageDialog(null, "¡Todas las tablas han sido vaciadas!");
+
+    } catch (SQLException e) {
+        e.printStackTrace();
+        JOptionPane.showMessageDialog(null, "Error al vaciar las tablas: " + e.getMessage());
+    } finally {
+        try {
+            if (ps != null) ps.close();
+            if (con != null) con.close();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+}    
     
     
     public static boolean registrarAdmin(String usuario, String identificacion, String contraseña) {
