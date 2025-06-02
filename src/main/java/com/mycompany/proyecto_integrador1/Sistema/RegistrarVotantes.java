@@ -191,14 +191,12 @@ public class RegistrarVotantes extends javax.swing.JFrame {
     String curso = Tcurso.getText();
     String codigo = Tcrearcodigo.getText();
 
-    // Llamar al método GuardarVotante
     boolean exito = GuardarVotante(nombre1, nombre2, apellido1, apellido2, identificacion, curso, codigo);
 
-    // Mostrar mensaje según el resultado
     if (exito) {
-        JOptionPane.showMessageDialog(this, "✅ Estudiante registrado exitosamente.");
+        JOptionPane.showMessageDialog(this, "Estudiante registrado exitosamente.");
     } else {
-        JOptionPane.showMessageDialog(this, "❌ No se pudo registrar el estudiante.");
+        JOptionPane.showMessageDialog(this, "No se pudo registrar el estudiante.");
     }
     }//GEN-LAST:event_jLabel14MouseClicked
 
