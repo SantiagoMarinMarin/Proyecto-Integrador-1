@@ -18,6 +18,7 @@ public class CandidateForm extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         LabelNombre1 = new javax.swing.JLabel();
         LabelRegistrarcandidato1 = new javax.swing.JLabel();
         LabelRegistrarcandidato = new javax.swing.JLabel();
@@ -39,9 +40,18 @@ public class CandidateForm extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabelNombre1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        LabelNombre1.setText("Apellido");
-        jPanel1.add(LabelNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 460, -1, -1));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/Boton_atras.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 70));
+
+        LabelNombre1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        LabelNombre1.setForeground(new java.awt.Color(255, 255, 255));
+        LabelNombre1.setText("Apellido:");
+        jPanel1.add(LabelNombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 452, -1, 40));
 
         LabelRegistrarcandidato1.setFont(new java.awt.Font("Roboto", 1, 32)); // NOI18N
         LabelRegistrarcandidato1.setForeground(new java.awt.Color(255, 255, 255));
@@ -53,20 +63,24 @@ public class CandidateForm extends javax.swing.JFrame {
         LabelRegistrarcandidato.setText("Candidato:");
         jPanel1.add(LabelRegistrarcandidato, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
 
-        LabelNombre.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        LabelNombre.setText("Nombre");
+        LabelNombre.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        LabelNombre.setForeground(new java.awt.Color(255, 255, 255));
+        LabelNombre.setText("Nombre:");
         jPanel1.add(LabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, -1));
 
+        txtNombre.setBackground(new java.awt.Color(222, 227, 231));
+        txtNombre.setBorder(null);
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtNombreActionPerformed(evt);
             }
         });
-        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 460, 270, 50));
+        jPanel1.add(txtNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(1130, 460, 370, 50));
 
-        LabelCargo.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        LabelCargo.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        LabelCargo.setForeground(new java.awt.Color(255, 255, 255));
         LabelCargo.setText("Cargo:");
-        jPanel1.add(LabelCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 540, -1, -1));
+        jPanel1.add(LabelCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 530, -1, 40));
 
         txtNombre1.setBackground(new java.awt.Color(222, 227, 231));
         txtNombre1.setBorder(null);
@@ -90,10 +104,15 @@ public class CandidateForm extends javax.swing.JFrame {
         });
         jPanel1.add(cbCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 530, 360, 65));
 
-        LabelTarjetón.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        LabelTarjetón.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        LabelTarjetón.setForeground(new java.awt.Color(255, 255, 255));
         LabelTarjetón.setText("Tarjetón:");
-        jPanel1.add(LabelTarjetón, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 540, -1, -1));
-        jPanel1.add(txtTarjeton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1180, 542, 270, 50));
+        LabelTarjetón.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(LabelTarjetón, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 540, 110, 40));
+
+        txtTarjeton.setBackground(new java.awt.Color(222, 227, 231));
+        txtTarjeton.setBorder(null);
+        jPanel1.add(txtTarjeton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 532, 350, 60));
 
         jLabel9.setForeground(new java.awt.Color(0, 51, 204));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -154,6 +173,12 @@ int tarjeton = Integer.parseInt(txtTarjeton.getText());
 ConexionBD.guardarEnTablaPorCargo(nombreCompleto, cargo, tarjeton);
     }//GEN-LAST:event_jLabel6MouseClicked
 
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        ConfigPanel atrasPanel= new ConfigPanel();
+        atrasPanel.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jLabel1MouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelCargo;
@@ -163,6 +188,7 @@ ConexionBD.guardarEnTablaPorCargo(nombreCompleto, cargo, tarjeton);
     private javax.swing.JLabel LabelRegistrarcandidato1;
     private javax.swing.JLabel LabelTarjetón;
     private javax.swing.JComboBox<String> cbCargo;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

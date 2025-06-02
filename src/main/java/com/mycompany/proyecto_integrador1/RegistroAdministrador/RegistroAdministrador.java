@@ -31,6 +31,7 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         icongrisnombre4 = new javax.swing.JLabel();
         icongrisnombre1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
 
@@ -116,6 +117,26 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         });
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, -1));
 
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jPanel3MouseClicked(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 110, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 80, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 110, 80));
+
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 810));
 
         jLabel9.setFont(new java.awt.Font("Roboto", 1, 26)); // NOI18N
@@ -162,6 +183,11 @@ public class RegistroAdministrador extends javax.swing.JFrame {
         login.setVisible(true);
     }//GEN-LAST:event_jLabel1MouseClicked
 
+    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
+        LoginAdministrador login = new LoginAdministrador();
+        login.setVisible(true);
+    }//GEN-LAST:event_jPanel3MouseClicked
+
    
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -182,5 +208,6 @@ public class RegistroAdministrador extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
 }

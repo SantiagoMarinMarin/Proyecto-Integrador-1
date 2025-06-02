@@ -127,7 +127,15 @@ public class VotarContralor extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 640, -1, -1));
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 650, 170, 50));
+
+        jTextField1.setBackground(new java.awt.Color(58, 134, 255));
+        jTextField1.setBorder(null);
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 640, 220, 60));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/votantes/Voto.png"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 640, -1, -1));
@@ -214,6 +222,10 @@ public class VotarContralor extends javax.swing.JFrame {
     mediador.setVisible(true);
     dispose();
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

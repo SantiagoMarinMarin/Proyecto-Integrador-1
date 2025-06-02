@@ -42,7 +42,7 @@ public class RegistrarVotantes extends javax.swing.JFrame {
                 jLabel1MouseClicked(evt);
             }
         });
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 70));
 
         jLabel9.setForeground(new java.awt.Color(0, 51, 204));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
