@@ -78,7 +78,7 @@ public class VotarContralor extends javax.swing.JFrame {
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         jTable1.setBackground(new java.awt.Color(230, 243, 255));
-        jTable1.setFont(new java.awt.Font("Roboto", 1, 24)); // NOI18N
+        jTable1.setFont(new java.awt.Font("Roboto", 1, 12)); // NOI18N
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -129,6 +129,7 @@ public class VotarContralor extends javax.swing.JFrame {
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(810, 640, -1, -1));
 
         jTextField1.setBackground(new java.awt.Color(58, 134, 255));
+        jTextField1.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         jTextField1.setBorder(null);
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

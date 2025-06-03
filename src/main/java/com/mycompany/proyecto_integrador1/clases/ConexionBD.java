@@ -276,7 +276,7 @@ public static void vaciarTablas() {
         pstmt.setString(2, cargo);
         pstmt.setInt(3, tarjeton);
         pstmt.executeUpdate();
-
+        JOptionPane.showMessageDialog(null, "¡Se guardo con exito!");
     } catch (SQLException e) {
         e.printStackTrace();
     } finally {

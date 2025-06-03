@@ -37,7 +37,6 @@ public class AdminInterface extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1850, 845));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -64,6 +63,11 @@ public class AdminInterface extends javax.swing.JFrame {
         btnVotaciones.setText("Resultados");
         btnVotaciones.setBorder(null);
         btnVotaciones.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        btnVotaciones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnVotacionesMouseClicked(evt);
+            }
+        });
         btnVotaciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVotacionesActionPerformed(evt);
@@ -183,6 +187,14 @@ public class AdminInterface extends javax.swing.JFrame {
     private void btnVotacionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVotacionesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVotacionesActionPerformed
+
+    private void btnVotacionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnVotacionesMouseClicked
+         try {
+        java.awt.Desktop.getDesktop().browse(new java.net.URI("http://127.0.0.1:5000"));
+    } catch (Exception ex) {
+        ex.printStackTrace();
+    }
+    }//GEN-LAST:event_btnVotacionesMouseClicked
 
    
 
