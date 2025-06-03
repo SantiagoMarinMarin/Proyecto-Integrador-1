@@ -152,12 +152,8 @@ private JButton btnGestionCandidatos, btnAdminVotaciones;
     }//GEN-LAST:event_btnRegistrarVotantes1ActionPerformed
 
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        ConfigPanel atrasPanel= new ConfigPanel();
-        atrasPanel.setVisible(true);
-        Window window = SwingUtilities.getWindowAncestor(this);
-        if (window != null) {
-        window.dispose();
-}
+        AdminInterface administrador = new AdminInterface();
+        administrador.setVisible(true);
     }//GEN-LAST:event_jLabel1MouseClicked
 
     private void btnCrearCandidatosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrearCandidatosMouseClicked

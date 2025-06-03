@@ -69,6 +69,7 @@ public class CandidateForm extends javax.swing.JFrame {
         jPanel1.add(LabelNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, -1, -1));
 
         txtNombre.setBackground(new java.awt.Color(222, 227, 231));
+        txtNombre.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         txtNombre.setBorder(null);
         txtNombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +84,7 @@ public class CandidateForm extends javax.swing.JFrame {
         jPanel1.add(LabelCargo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 530, -1, 40));
 
         txtNombre1.setBackground(new java.awt.Color(222, 227, 231));
+        txtNombre1.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         txtNombre1.setBorder(null);
         txtNombre1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +113,7 @@ public class CandidateForm extends javax.swing.JFrame {
         jPanel1.add(LabelTarjetón, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 540, 110, 40));
 
         txtTarjeton.setBackground(new java.awt.Color(222, 227, 231));
+        txtTarjeton.setFont(new java.awt.Font("Roboto", 0, 24)); // NOI18N
         txtTarjeton.setBorder(null);
         jPanel1.add(txtTarjeton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1140, 532, 350, 60));
 
